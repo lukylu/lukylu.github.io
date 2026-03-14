@@ -1,0 +1,36 @@
+<section id="skills" class="skills noise">
+  <app-section-title label="SKILLS" num="06" />
+
+  <!-- Category tabs -->
+  <div class="skill-tabs">
+    <button
+      class="skill-tab"
+      *ngFor="let cat of categories"
+      [class.active]="active === cat"
+      (click)="active = cat">
+      <span class="tab-prompt">&gt;</span> {{ cat }}
+    </button>
+  </div>
+
+  <!-- Skill grid -->
+  <div class="skill-grid">
+    <div class="skill-card pixel-box" *ngFor="let skill of filtered">
+      <div class="skill-icon">{{ skill.icon }}</div>
+      <div class="skill-info">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-stars">
+          <span
+            class="star"
+            *ngFor="let filled of getStars(skill.level)"
+            [class.filled]="filled"
+            [style.color]="filled ? getLevelColor(skill.level) : 'rgba(255,255,255,.2)'">
+            ★
+          </span>
+        </div>
+        <span class="skill-level" [style.color]="getLevelColor(skill.level)">
+          {{ getLevelLabel(skill.level) }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

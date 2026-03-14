@@ -1,0 +1,59 @@
+<section id="contact" class="contact noise">
+  <app-section-title label="CONTACTO" num="08" />
+
+  <div class="contact-layout">
+    <div class="form-panel pixel-box">
+      <div class="panel-header">
+        <span class="panel-title">// NUEVO MENSAJE</span>
+        <span class="blink">_</span>
+      </div>
+
+      <div class="sent-screen" *ngIf="sent">
+        <p class="sent-title">✓ MENSAJE ENVIADO</p>
+        <p class="sent-sub">Me pondré en contacto contigo pronto.</p>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="onSubmit()" *ngIf="!sent">
+        <div class="field">
+          <label class="field-label">NOMBRE:</label>
+          <input class="field-input" type="text" [(ngModel)]="name" name="name"
+                 placeholder="Tu nombre" required autocomplete="off" />
+        </div>
+        <div class="field">
+          <label class="field-label">EMAIL:</label>
+          <input class="field-input" type="email" [(ngModel)]="email" name="email"
+                 placeholder="tu@email.com" required autocomplete="off" />
+        </div>
+        <div class="field">
+          <label class="field-label">MENSAJE:</label>
+          <textarea class="field-input" [(ngModel)]="message" name="message"
+                    rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <button class="submit-btn" type="submit" [disabled]="sending">
+          <span *ngIf="!sending">▶ ENVIAR MENSAJE</span>
+          <span *ngIf="sending" class="blink">⟳ ENVIANDO...</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="links-panel">
+      <p class="links-label">// TAMBIÉN PUEDES ENCONTRARME EN</p>
+      <div class="link-cards">
+        <a class="link-card pixel-box" *ngFor="let link of links"
+           [href]="link.url" target="_blank">
+          <span class="link-icon">{{ link.icon }}</span>
+          <span class="link-label">{{ link.label }}</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="availability">
+        <span class="av-dot blink">●</span>
+        <div>
+          <p class="av-title">DISPONIBLE AHORA</p>
+          <p class="av-sub">Buscando primer empleo · Avilés, Asturias</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

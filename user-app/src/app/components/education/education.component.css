@@ -1,0 +1,106 @@
+
+.education { padding: 96px 64px; }
+
+.edu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.edu-card {
+  background: var(--surface);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform .2s, box-shadow .2s;
+
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 darken(#00ffff, 20%);
+  }
+
+  &.current {
+    border-color: var(--green);
+    box-shadow: 4px 4px 0 darken(#00ff41, 20%),
+                inset 0 0 20px rgba(var(--green), .05);
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-index {
+  font-family: var(--fp);
+  font-size: .5rem;
+  color: var(--magenta);
+  opacity: .6;
+}
+
+.card-meta {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.card-period {
+  font-family: var(--fm);
+  font-size: .7rem;
+  color: var(--muted);
+}
+
+.current-badge {
+  font-family: var(--fm);
+  font-size: .65rem;
+  color: var(--green);
+  text-shadow: 0 0 6px var(--green);
+  display: flex; align-items: center; gap: 4px;
+}
+
+.card-degree {
+  font-family: var(--fp);
+  font-size: .6rem;
+  color: var(--cyan);
+  line-height: 1.6;
+  text-shadow: 0 0 6px rgba(var(--cyan), .4);
+}
+
+.card-school {
+  font-family: var(--fm);
+  font-size: .85rem;
+  color: var(--muted);
+  .prompt { color: var(--yellow); margin-right: 4px; }
+}
+
+.card-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+
+.tag {
+  font-family: var(--fm);
+  font-size: .65rem;
+  color: var(--green);
+  border: 1px solid rgba(var(--green), .3);
+  padding: 2px 8px;
+  background: rgba(var(--green), .04);
+}
+
+.card-grade {
+  font-family: var(--fm);
+  font-size: .8rem;
+  display: flex; align-items: center; gap: 8px;
+  .grade-label { color: var(--muted); }
+  .grade-value { color: var(--yellow); text-shadow: 0 0 6px rgba(var(--yellow), .5); }
+}
+
+.blink { animation: blink .8s step-end infinite; }
+@keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
+
+@media(max-width:768px){
+  .edu-list { grid-template-columns: 1fr; }
+  .edu-card { padding: 18px; }
+}
+@media(max-width:480px){
+  .card-degree { font-size: .46rem; }
+}

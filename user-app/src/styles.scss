@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap');
+
+/* ── Variables globales ── */
+:root {
+  --bg:        #0a0a0f;
+  --bg-alt:    #0f0f1a;
+  --surface:   #141420;
+  --surface-2: #1a1a2e;
+  --cyan:      #00ffff;
+  --magenta:   #ff00ff;
+  --yellow:    #ffff00;
+  --green:     #00ff41;
+  --red:       #ff0040;
+  --white:     #e8e8e8;
+  --muted:     rgba(232,232,232,0.45);
+  --border:    rgba(0,255,255,0.15);
+  --fp:        'Press Start 2P', monospace;
+  --fr:        'VT323', monospace;
+  --fm:        'Share Tech Mono', monospace;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--fm);
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── Scrollbar retro ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--cyan); box-shadow: 0 0 6px var(--cyan); }
+
+/* ── Selección ── */
+::selection { background: var(--magenta); color: var(--bg); }
+
+/* ── Links ── */
+a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--magenta); }
+
+/* ── Sections base ── */
+section { position: relative; padding: 90px 64px; overflow: hidden; }
+
+/* ── Utilidades ── */
+.pixel-box {
+  border: 2px solid var(--cyan);
+  box-shadow: 4px 4px 0 rgba(0,180,180,0.4), inset 0 0 20px rgba(0,255,255,0.03);
+}
+
+.noise::before {
+  content: '';
+  position: absolute; inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 150px;
+  pointer-events: none;
+}
+
+.blink { animation: blink 0.8s step-end infinite; }
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+
+
+/* ── RESPONSIVE GLOBAL ── */
+@media(max-width:768px){
+  section { padding: 70px 24px; }
+}
+@media(max-width:480px){
+  section { padding: 56px 16px; }
+}

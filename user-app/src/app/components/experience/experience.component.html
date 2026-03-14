@@ -1,0 +1,40 @@
+<section id="experience" class="experience noise">
+  <app-section-title label="EXPERIENCIA" num="04" />
+
+  <div class="timeline">
+    <div class="timeline-track"></div>
+
+    @for (item of items; track item.role) {
+      <div class="timeline-item">
+        <div class="node" [class.current]="item.current">
+          @if (item.current) {
+            <span class="blink">◆</span>
+          } @else {
+            <span>◇</span>
+          }
+        </div>
+
+        <div class="exp-card pixel-box" [class.current]="item.current">
+          <div class="exp-header">
+            <span class="exp-period">{{ item.period }}</span>
+            @if (item.current) {
+              <span class="exp-badge">
+                <span class="blink">▶</span> PRÁCTICAS FCT
+              </span>
+            }
+          </div>
+          <h3 class="exp-role">{{ item.role }}</h3>
+          <p class="exp-company">
+            <span class="prompt">$</span> {{ item.company }}
+          </p>
+          <p class="exp-desc">{{ item.desc }}</p>
+          <div class="exp-tags">
+            @for (t of item.tags; track t) {
+              <span class="tag">{{ t }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,76 @@
+<section id="hero" class="hero noise crt-screen">
+
+  <div class="hero-grid"></div>
+
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="status-bar top">
+    <span>SYSTEM ONLINE</span>
+    <span class="dot-green">●</span>
+    <span>READY</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-greeting">
+      <span class="prompt">&gt;&gt;&gt;</span> HOLA, SOY
+    </p>
+
+    <h1 class="hero-name">
+      <app-glitch-text text="LUCAS FDEZ IGLESIAS" size="xl" />
+    </h1>
+
+    <div class="hero-role">
+      <span class="role-prefix">$</span>
+      <span class="role-text">{{ typedText }}</span>
+      <span class="role-cursor blink">█</span>
+    </div>
+
+    <p class="hero-desc">
+      Joven <span class="highlight">Desarrollador de Aplicaciones Web</span> con ganas de
+      poner en práctica mis conocimientos en el ámbito laboral. Estudiando
+      <span class="highlight">DAW en FuniverS</span> y con experiencia real en prácticas.
+      Basado en <span class="highlight">Avilés, Asturias</span>.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-primary" (click)="scrollToProjects()">
+        <span class="btn-icon">▶</span> VER PROYECTOS
+      </button>
+      <button class="btn-outline" (click)="scrollToContact()">
+        <span class="btn-icon">✉</span> CONTACTAR
+      </button>
+    </div>
+
+    <div class="hero-badges">
+      <span class="badge" *ngFor="let b of ['HTML','CSS','JavaScript','PHP','MySQL','Java','Docker']">
+        {{ b }}
+      </span>
+    </div>
+  </div>
+
+  <div class="ascii-art" aria-hidden="true">
+    <pre>
+ ██████╗ ███████╗██╗   ██╗
+ ██╔══██╗██╔════╝██║   ██║
+ ██║  ██║█████╗  ██║   ██║
+ ██║  ██║██╔══╝  ╚██╗ ██╔╝
+ ██████╔╝███████╗ ╚████╔╝
+ ╚═════╝ ╚══════╝  ╚═══╝
+    </pre>
+  </div>
+
+  <div class="status-bar bottom">
+    <span>LINE 01</span>
+    <span>COL 00</span>
+    <span>UTF-8</span>
+    <span class="blink">■ RECORDING</span>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL DOWN</span>
+    <div class="scroll-arrow">▼</div>
+  </div>
+</section>
