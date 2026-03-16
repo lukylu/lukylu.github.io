@@ -40,19 +40,19 @@ import { Component, ViewEncapsulation } from '@angular/core';
         <div class="lpanel">
           <p class="llbl">// TAMBIÉN PUEDES ENCONTRARME EN</p>
           <div class="lcards">
-            <a class="lkcard" href="#" target="_blank">
+            <a class="lkcard" href="https://github.com/lukylu" target="_blank">
               <span class="lkicon">⌥</span>
               <span class="lklbl">GITHUB</span>
               <span class="lkarr">→</span>
             </a>
-            <a class="lkcard" href="#" target="_blank">
+            <a class="lkcard" href="https://www.linkedin.com/in/lucas-fdez-iglesias-bb42b0258/" target="_blank">
               <span class="lkicon">🔗</span>
               <span class="lklbl">LINKEDIN</span>
               <span class="lkarr">→</span>
             </a>
             <a class="lkcard" href="mailto:lucasfdezdev@gmail.com">
               <span class="lkicon">✉</span>
-              <span class="lklbl">lucasfdezdev&#64;gmail.com</span>
+              <span class="lklbl">lucasfdeziglesias24@gmail.com</span>
               <span class="lkarr">→</span>
             </a>
             <a class="lkcard" href="tel:+34684604982">
