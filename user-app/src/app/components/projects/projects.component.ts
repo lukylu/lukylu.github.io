@@ -47,7 +47,7 @@ interface Project {
             </div>
           </div>
           <div class="pclinks">
-            <a class="plbtn out" *ngIf="p.repo" [href]="p.repo" target="_blank">⌥ CÓDIGO</a>
+            <a class="plbtn out" *ngIf="p.repo" [href]="p.repo" target="_blank">▶ VER DEMO</a>
           </div>
         </article>
       </div>
@@ -135,6 +135,13 @@ export class ProjectsComponent {
       desc: 'Aplicación web completa desarrollada durante el ciclo formativo de DAW. CRUD con PHP y MySQL, lógica de negocio en Java.',
       tags: ['PHP','MySQL','Java','HTML','CSS'],
       status: 'SHIPPED', statusColor: '#00ff41', feat: false
+    },
+    {
+      id: '04', title: 'IRONCORE GYM',
+      desc: 'Aplicación web fullstack que simula la experiencia completa de un gimnasio real. Registro e inicio de sesión con autenticación persistida en base de datos, obligatoria para reservar clases y pistas de pádel, cancelar reservas, comprar membresías y hacerse socio. Panel personal con historial de gasto, reservas activas e información del equipamiento. Modo administrador protegido por clave secreta con acceso a la base de datos completa — usuarios registrados con contraseñas hasheadas — y exportación en JSON. Desplegada en Vercel.',
+      tags: ['Angular','TypeScript','CSS','MySQL','Auth','Admin Panel','Vercel'],
+      status: 'SHIPPED', statusColor: '#00ff41', feat: true,
+      repo: 'https://gimnasio-app-psi.vercel.app/'
     }
   ];
 

@@ -129,12 +129,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.scrollHandler = () => {
       this.scrolled = window.scrollY > 60;
       const secs = ['hero','education','experience','languages','skills','projects','contact'];
-      let act = 'hero';
+      const vh = window.innerHeight;
+      let bestId = 'hero';
+      let bestVisible = -1;
       secs.forEach(id => {
-        const s = document.getElementById(id);
-        if (s && s.getBoundingClientRect().top < 200) act = id;
+        const el = document.getElementById(id);
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const visibleTop = Math.max(rect.top, 0);
+        const visibleBottom = Math.min(rect.bottom, vh);
+        const visible = Math.max(0, visibleBottom - visibleTop);
+        if (visible > bestVisible) { bestVisible = visible; bestId = id; }
       });
-      this.active = act;
+      this.active = bestId;
     };
     window.addEventListener('scroll', this.scrollHandler);
   }
