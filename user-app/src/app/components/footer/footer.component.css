@@ -7,7 +7,7 @@
 .footer-line {
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), transparent);
-  box-shadow: 0 0 8px rgba(var(--cyan), .4);
+  box-shadow: 0 0 8px rgba(0,255,255,.4);
 }
 
 .footer-content {

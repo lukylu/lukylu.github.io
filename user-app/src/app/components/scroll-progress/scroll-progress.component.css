@@ -3,7 +3,7 @@
   position: fixed; top: 0; left: 0; right: 0;
   height: 3px;
   z-index: 9999 - 1;
-  background: rgba(var(--cyan), 0.1);
+  background: rgba(0,255,255,0.1);
 }
 
 .progress-bar {
