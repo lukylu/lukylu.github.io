@@ -1,58 +1,90 @@
-import { Component, OnInit, OnDestroy, HostListener, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-custom-cursor',
   standalone: true,
-  imports: [CommonModule],
+  encapsulation: ViewEncapsulation.None,
   template: `
-    <div class="cursor-dot"   #dot></div>
-    <div class="cursor-ring"  #ring></div>
-    <div class="cursor-trail" #trail></div>
+    <div id="cur"></div>
+    <div id="cur2"></div>
+    <div id="cur3"></div>
   `,
-  styleUrl: './custom-cursor.component.css'
+  styles: [`
+    #cur {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      width: 10px; height: 10px;
+      background: var(--cyan); border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 8px var(--cyan);
+      mix-blend-mode: difference;
+      transition: width .1s, height .1s, background .1s;
+    }
+    #cur2 {
+      position: fixed; top: 0; left: 0; z-index: 9998;
+      width: 32px; height: 32px;
+      border: 1px solid rgba(0,255,255,.5);
+      pointer-events: none;
+      transform: rotate(45deg);
+    }
+    #cur3 {
+      position: fixed; top: 0; left: 0; z-index: 9997;
+      width: 56px; height: 56px;
+      border: 1px solid rgba(255,0,255,.15);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    @media (hover: none), (max-width: 768px) {
+      #cur, #cur2, #cur3 { display: none !important; }
+    }
+  `]
 })
-export class CustomCursorComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('dot')   dotRef!:   ElementRef<HTMLDivElement>;
-  @ViewChild('ring')  ringRef!:  ElementRef<HTMLDivElement>;
-  @ViewChild('trail') trailRef!: ElementRef<HTMLDivElement>;
-
+export class CustomCursorComponent implements OnInit, OnDestroy {
   private mx = 0; private my = 0;
-  private rx = 0; private ry = 0;
-  private tx = 0; private ty = 0;
-  private rafId!: number;
-  isHovering = false;
+  private r2x = 0; private r2y = 0;
+  private r3x = 0; private r3y = 0;
+  private rafId = 0;
+  private mouseMoveHandler!: (e: MouseEvent) => void;
+  private enterHandler!: () => void;
+  private leaveHandler!: () => void;
 
-  ngAfterViewInit() { this.animate(); }
+  ngOnInit(): void {
+    const c = document.getElementById('cur')!;
+    const c2 = document.getElementById('cur2')!;
+    const c3 = document.getElementById('cur3')!;
 
-  @HostListener('document:mousemove', ['$event'])
-  onMove(e: MouseEvent) {
-    this.mx = e.clientX; this.my = e.clientY;
-    this.dotRef.nativeElement.style.transform =
-      `translate(${e.clientX}px, ${e.clientY}px)`;
+    this.mouseMoveHandler = (e: MouseEvent) => {
+      this.mx = e.clientX; this.my = e.clientY;
+      c.style.transform = `translate(${this.mx - 5}px,${this.my - 5}px)`;
+    };
+    document.addEventListener('mousemove', this.mouseMoveHandler);
+
+    const loop = () => {
+      this.r2x += (this.mx - this.r2x) * .13;
+      this.r2y += (this.my - this.r2y) * .13;
+      this.r3x += (this.mx - this.r3x) * .07;
+      this.r3y += (this.my - this.r3y) * .07;
+      c2.style.transform = `translate(${this.r2x - 16}px,${this.r2y - 16}px) rotate(45deg)`;
+      c3.style.transform = `translate(${this.r3x - 28}px,${this.r3y - 28}px)`;
+      this.rafId = requestAnimationFrame(loop);
+    };
+    loop();
+
+    this.enterHandler = () => {
+      c.style.width = '14px'; c.style.height = '14px';
+      c.style.background = 'var(--magenta)';
+    };
+    this.leaveHandler = () => {
+      c.style.width = '10px'; c.style.height = '10px';
+      c.style.background = 'var(--cyan)';
+    };
+    document.querySelectorAll('a,button,input,textarea').forEach(el => {
+      el.addEventListener('mouseenter', this.enterHandler);
+      el.addEventListener('mouseleave', this.leaveHandler);
+    });
   }
 
-  @HostListener('document:mousedown')
-  onDown() { this.dotRef.nativeElement.classList.add('clicking'); }
-
-  @HostListener('document:mouseup')
-  onUp() { this.dotRef.nativeElement.classList.remove('clicking'); }
-
-  private animate() {
-    // ring follows with lag
-    this.rx += (this.mx - this.rx) * 0.15;
-    this.ry += (this.my - this.ry) * 0.15;
-    this.ringRef.nativeElement.style.transform =
-      `translate(${this.rx}px, ${this.ry}px)`;
-
-    // trail follows with more lag
-    this.tx += (this.mx - this.tx) * 0.07;
-    this.ty += (this.my - this.ty) * 0.07;
-    this.trailRef.nativeElement.style.transform =
-      `translate(${this.tx}px, ${this.ty}px)`;
-
-    this.rafId = requestAnimationFrame(() => this.animate());
+  ngOnDestroy(): void {
+    document.removeEventListener('mousemove', this.mouseMoveHandler);
+    cancelAnimationFrame(this.rafId);
   }
-
-  ngOnDestroy() { cancelAnimationFrame(this.rafId); }
 }
