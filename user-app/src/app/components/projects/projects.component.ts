@@ -15,7 +15,7 @@ interface Project {
   template: `
     <section id="projects" class="noise">
       <div class="sec-title">
-        <span class="sec-num">08</span>
+        <span class="sec-num">06</span>
         <div>
           <span class="glitch" data-t="PROYECTOS">PROYECTOS</span>
           <div class="sec-line"></div>

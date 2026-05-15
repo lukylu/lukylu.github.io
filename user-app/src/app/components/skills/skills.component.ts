@@ -11,7 +11,7 @@ interface Skill { n: string; ic: string; l: number; }
   template: `
     <section id="skills" class="noise">
       <div class="sec-title">
-        <span class="sec-num">07</span>
+        <span class="sec-num">05</span>
         <div>
           <span class="glitch" data-t="SKILLS">SKILLS</span>
           <div class="sec-line"></div>

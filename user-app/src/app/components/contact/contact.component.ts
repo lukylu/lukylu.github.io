@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   template: `
     <section id="contact" class="noise">
       <div class="sec-title">
-        <span class="sec-num">09</span>
+        <span class="sec-num">07</span>
         <div>
           <span class="glitch" data-t="CONTACTO">CONTACTO</span>
           <div class="sec-line"></div>

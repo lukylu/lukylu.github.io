@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <section id="languages" class="noise">
       <div class="sec-title">
-        <span class="sec-num">06</span>
+        <span class="sec-num">04</span>
         <div>
           <span class="glitch" data-t="IDIOMAS">IDIOMAS</span>
           <div class="sec-line"></div>
