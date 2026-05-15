@@ -11,7 +11,7 @@ interface Skill { n: string; ic: string; l: number; }
   template: `
     <section id="skills" class="noise">
       <div class="sec-title">
-        <span class="sec-num">06</span>
+        <span class="sec-num">07</span>
         <div>
           <span class="glitch" data-t="SKILLS">SKILLS</span>
           <div class="sec-line"></div>
@@ -38,7 +38,7 @@ interface Skill { n: string; ic: string; l: number; }
     </section>
   `,
   styles: [`
-    #skills { background: var(--bg); }
+    #skills { background: var(--bg-alt); }
     .skill-tabs {
       display: flex; gap: 8px; margin-bottom: 32px;
       border-bottom: 1px solid var(--border); padding-bottom: 16px;

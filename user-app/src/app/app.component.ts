@@ -6,6 +6,7 @@ import { ScrollProgressComponent } from './components/scroll-progress/scroll-pro
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { EducationComponent } from './components/education/education.component';
+import { CertificatesComponent } from './components/certificates/certificates.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -24,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     HeroComponent,
     EducationComponent,
+    CertificatesComponent,
     ExperienceComponent,
     LanguagesComponent,
     SkillsComponent,
@@ -39,6 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
       <app-navbar></app-navbar>
       <app-hero></app-hero>
       <app-education></app-education>
+      <app-certificates></app-certificates>
       <app-experience></app-experience>
       <app-languages></app-languages>
       <app-skills></app-skills>

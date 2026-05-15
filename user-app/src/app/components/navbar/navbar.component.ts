@@ -17,6 +17,7 @@ import { ScrollService } from '../../services/scroll.service';
       <ul class="nav-links">
         <li><a href="#" (click)="scroll('hero');$event.preventDefault()" [class.active]="active==='hero'" data-s="hero">// INICIO</a></li>
         <li><a href="#" (click)="scroll('education');$event.preventDefault()" [class.active]="active==='education'" data-s="education">// ESTUDIOS</a></li>
+        <li><a href="#" (click)="scroll('certificates');$event.preventDefault()" [class.active]="active==='certificates'" data-s="certificates">// CERTIFICADOS</a></li>
         <li><a href="#" (click)="scroll('experience');$event.preventDefault()" [class.active]="active==='experience'" data-s="experience">// EXPERIENCIA</a></li>
         <li><a href="#" (click)="scroll('languages');$event.preventDefault()" [class.active]="active==='languages'" data-s="languages">// IDIOMAS</a></li>
         <li><a href="#" (click)="scroll('skills');$event.preventDefault()" [class.active]="active==='skills'" data-s="skills">// SKILLS</a></li>
@@ -32,6 +33,7 @@ import { ScrollService } from '../../services/scroll.service';
       <ul>
         <li><a href="#" (click)="scrollMobile('hero');$event.preventDefault()">// INICIO</a></li>
         <li><a href="#" (click)="scrollMobile('education');$event.preventDefault()">// ESTUDIOS</a></li>
+        <li><a href="#" (click)="scrollMobile('certificates');$event.preventDefault()">// CERTIFICADOS</a></li>
         <li><a href="#" (click)="scrollMobile('experience');$event.preventDefault()">// EXPERIENCIA</a></li>
         <li><a href="#" (click)="scrollMobile('languages');$event.preventDefault()">// IDIOMAS</a></li>
         <li><a href="#" (click)="scrollMobile('skills');$event.preventDefault()">// SKILLS</a></li>
@@ -128,7 +130,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.scrollHandler = () => {
       this.scrolled = window.scrollY > 60;
-      const secs = ['hero','education','experience','languages','skills','projects','contact'];
+      const secs = ['hero','education','certificates','experience','languages','skills','projects','contact'];
       const vh = window.innerHeight;
       let bestId = 'hero';
       let bestVisible = -1;

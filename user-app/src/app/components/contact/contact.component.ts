@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   template: `
     <section id="contact" class="noise">
       <div class="sec-title">
-        <span class="sec-num">08</span>
+        <span class="sec-num">09</span>
         <div>
           <span class="glitch" data-t="CONTACTO">CONTACTO</span>
           <div class="sec-line"></div>
@@ -74,7 +74,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
     </section>
   `,
   styles: [`
-    #contact { background: var(--bg); }
+    #contact { background: var(--bg-alt); }
     .contact-layout {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 40px; align-items: start;

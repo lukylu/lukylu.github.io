@@ -15,7 +15,7 @@ interface Project {
   template: `
     <section id="projects" class="noise">
       <div class="sec-title">
-        <span class="sec-num">07</span>
+        <span class="sec-num">08</span>
         <div>
           <span class="glitch" data-t="PROYECTOS">PROYECTOS</span>
           <div class="sec-line"></div>
@@ -54,7 +54,7 @@ interface Project {
     </section>
   `,
   styles: [`
-    #projects { background: var(--bg-alt); }
+    #projects { background: var(--bg); }
     .proj-filters { display: flex; gap: 8px; margin-bottom: 32px; position: relative; z-index: 1; }
     .pfbtn {
       font-family: var(--fp); font-size: .47rem;

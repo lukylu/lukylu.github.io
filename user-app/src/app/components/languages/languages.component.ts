@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <section id="languages" class="noise">
       <div class="sec-title">
-        <span class="sec-num">05</span>
+        <span class="sec-num">06</span>
         <div>
           <span class="glitch" data-t="IDIOMAS">IDIOMAS</span>
           <div class="sec-line"></div>
@@ -50,7 +50,7 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [`
-    #languages { background: var(--bg-alt); }
+    #languages { background: var(--bg); }
     .lang-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
