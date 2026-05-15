@@ -92,11 +92,11 @@ export class SkillsComponent {
   allSkills: Record<string, Skill[]> = {
     FRONTEND: [
       { n: 'HTML', ic: '🌐', l: 5 }, { n: 'CSS', ic: '🎨', l: 5 }, { n: 'Tailwind CSS', ic: '💨', l: 4 },
-      { n: 'JavaScript', ic: '⚡', l: 3 }, { n: 'TypeScript', ic: '𝓣', l: 3 }, { n: 'Angular', ic: '🅰', l: 3 }
+      { n: 'JavaScript', ic: '⚡', l: 3 }, { n: 'TypeScript', ic: '𝓣', l: 3 }, { n: 'Angular', ic: '🅰', l: 4 }
     ],
     BACKEND: [
-      { n: 'MySQL', ic: '🗄', l: 4 }, { n: 'SQL', ic: '📊', l: 4 }, { n: 'MongoDB', ic: '🍃', l: 3 },
-      { n: 'SQLite', ic: '🗃️', l: 4 }, { n: 'PHP', ic: '🐘', l: 2 }, { n: 'Java', ic: '☕', l: 3 },
+      { n: 'SQL', ic: '📊', l: 4 }, { n: 'MySQL', ic: '🗄', l: 4 }, { n: 'SQLite', ic: '🗃️', l: 4 },
+      { n: 'MongoDB', ic: '🍃', l: 3 }, { n: 'PHP', ic: '🐘', l: 2 }, { n: 'Java', ic: '☕', l: 3 },
       { n: 'Docker', ic: '🐋', l: 2 }
     ],
     TOOLS: [
