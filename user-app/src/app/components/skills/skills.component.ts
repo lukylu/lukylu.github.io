@@ -96,7 +96,8 @@ export class SkillsComponent {
     ],
     BACKEND: [
       { n: 'MySQL', ic: '🗄', l: 4 }, { n: 'SQL', ic: '📊', l: 4 }, { n: 'MongoDB', ic: '🍃', l: 3 },
-      { n: 'PHP', ic: '🐘', l: 2 }, { n: 'Java', ic: '☕', l: 3 }, { n: 'Docker', ic: '🐋', l: 2 }
+      { n: 'SQLite', ic: '🗃️', l: 4 }, { n: 'PHP', ic: '🐘', l: 2 }, { n: 'Java', ic: '☕', l: 3 },
+      { n: 'Docker', ic: '🐋', l: 2 }
     ],
     TOOLS: [
       { n: 'VS Code', ic: '💙', l: 5 }, { n: 'Vite', ic: '⚡', l: 4 }, { n: 'Git', ic: '🌿', l: 3 },
