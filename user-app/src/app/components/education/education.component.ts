@@ -58,21 +58,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
           </div>
         </div>
 
-        <div class="edu-card pbox">
-          <div class="ch">
-            <span class="ci">04</span>
-            <span class="cper">13/03/2026</span>
-          </div>
-          <h3 class="cdeg">INICIACIÓN AL DESARROLLO CON IA</h3>
-          <p class="csch"><span>@</span> BIG school</p>
-          <div class="ctags">
-            <span class="tag">IA</span>
-            <span class="tag">Agentes</span>
-            <span class="tag">Ciberseguridad</span>
-            <span class="tag">Prompting</span>
-          </div>
-          <div class="cgrade"><span class="gl">CERT:</span><span class="gv">Desarrollo con IA: de 0 a Producción</span></div>
-        </div>
+
 
       </div>
     </section>

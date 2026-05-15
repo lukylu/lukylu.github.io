@@ -18,25 +18,17 @@ import { Component, ViewEncapsulation } from '@angular/core';
         <div class="cert-card pbox">
           <div class="ch">
             <span class="ci">01</span>
-            <span class="cper">2026</span>
+            <span class="cper">13/03/2026</span>
           </div>
-          <h3 class="cdeg">DESARROLLO CON IA: DE 0 A PRODUCCIÓN</h3>
+          <h3 class="cdeg">INICIACIÓN AL DESARROLLO CON IA</h3>
           <p class="csch"><span>@</span> BIG school</p>
           <div class="ctags">
-            <span class="tag">IA</span><span class="tag">Agentes</span><span class="tag">Prompting</span>
+            <span class="tag">IA</span>
+            <span class="tag">Agentes</span>
+            <span class="tag">Ciberseguridad</span>
+            <span class="tag">Prompting</span>
           </div>
-        </div>
-
-        <div class="cert-card pbox">
-          <div class="ch">
-            <span class="ci">02</span>
-            <span class="cper">2025</span>
-          </div>
-          <h3 class="cdeg">EF SET ENGLISH CERTIFICATE (C1/C2)</h3>
-          <p class="csch"><span>@</span> EF Education First</p>
-          <div class="ctags">
-            <span class="tag">Inglés</span><span class="tag">C1/C2</span>
-          </div>
+          <div class="cgrade"><span class="gl">CERT:</span><span class="gv">Desarrollo con IA: de 0 a Producción</span></div>
         </div>
 
       </div>
@@ -63,6 +55,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
       color: var(--green); border: 1px solid rgba(0,255,65,.3);
       padding: 2px 8px; background: rgba(0,255,65,.04);
     }
+    .cgrade { font-family: var(--fm); font-size: .78rem; display: flex; align-items: center; gap: 8px; }
+    .cgrade .gl { color: var(--muted); }
+    .cgrade .gv { color: var(--yellow); text-shadow: 0 0 6px rgba(255,255,0,.4); }
 
     @media (max-width: 768px) { .cert-grid { grid-template-columns: 1fr; } }
     @media (max-width: 480px) { .cert-card { padding: 18px; } .cdeg { font-size: .48rem; } }
