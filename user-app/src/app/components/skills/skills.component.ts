@@ -91,7 +91,7 @@ export class SkillsComponent {
 
   allSkills: Record<string, Skill[]> = {
     FRONTEND: [
-      { n: 'HTML', ic: '🌐', l: 5 }, { n: 'CSS', ic: '🎨', l: 5 }, { n: 'SCSS', ic: '💅', l: 5 },
+      { n: 'HTML', ic: '🌐', l: 5 }, { n: 'CSS', ic: '🎨', l: 5 }, { n: 'SCSS', ic: '💎', l: 4 },
       { n: 'Angular', ic: '🅰', l: 4 }, { n: 'Tailwind CSS', ic: '💨', l: 4 },
       { n: 'JavaScript', ic: '⚡', l: 3 }, { n: 'TypeScript', ic: '𝓣', l: 3 }
     ],
