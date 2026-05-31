@@ -19,6 +19,29 @@ import { Component, ViewEncapsulation } from '@angular/core';
           <div class="tnode cur blink">◆</div>
           <div class="ecard pbox cur">
             <div class="eh">
+              <span class="ep">16/02/2026 – 17/04/2026</span>
+              <span class="ebadge"><span class="blink">▶</span> PRÁCTICAS FCT</span>
+            </div>
+            <h3 class="er">DESARROLLADOR WEB FULL-STACK</h3>
+            <p class="eco"><span>$</span> Kodas Solutions</p>
+            <p class="edesc">
+              Desarrollo de 2 plataformas web con Angular 21 y creación de APIs REST para la gestión integral de datos.
+              Contribución directa a mejorar la visibilidad de los productos con soluciones de software robustas de inicio a fin.
+              Alta proactividad y adaptación rápida a un stack tecnológico completo (Frontend & Backend) en semanas.
+              Uso estratégico de Inteligencia Artificial para acelerar el desarrollo full-stack y optimizar flujos.
+            </p>
+            <div class="etags">
+              <span class="etag">Angular 21</span><span class="etag">HTML</span>
+              <span class="etag">CSS</span><span class="etag">TypeScript</span>
+              <span class="etag">API REST (Backend)</span><span class="etag">IA & Prompting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="titem">
+          <div class="tnode">◆</div>
+          <div class="ecard pbox">
+            <div class="eh">
               <span class="ep">24/03/2025 – 11/04/2025</span>
               <span class="ebadge"><span class="blink">▶</span> PRÁCTICAS FCT</span>
             </div>

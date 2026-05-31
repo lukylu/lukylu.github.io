@@ -31,6 +31,22 @@ import { Component, ViewEncapsulation } from '@angular/core';
           <div class="cgrade"><span class="gl">CERT:</span><span class="gv">Desarrollo con IA: de 0 a Producción</span></div>
         </div>
 
+        <div class="cert-card pbox">
+          <div class="ch">
+            <span class="ci">02</span>
+            <span class="cper">31/05/2026</span>
+          </div>
+          <h3 class="cdeg">SEO PARA IA Y GOOGLE</h3>
+          <p class="csch"><span>@</span> BIG school</p>
+          <div class="ctags">
+            <span class="tag">SEO</span>
+            <span class="tag">IA</span>
+            <span class="tag">Google</span>
+            <span class="tag">Tráfico</span>
+          </div>
+          <div class="cgrade"><span class="gl">CERT:</span><span class="gv">Optimización & Estrategia de Tráfico con IA</span></div>
+        </div>
+
       </div>
     </section>
   `,

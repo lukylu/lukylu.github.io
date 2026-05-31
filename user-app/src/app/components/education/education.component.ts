@@ -15,12 +15,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
       </div>
       <div class="edu-grid">
 
-        <div class="edu-card pbox cur">
+        <div class="edu-card pbox">
           <div class="ch">
             <span class="ci">01</span>
             <div style="display:flex;align-items:center;gap:10px">
-              <span class="cper">2024 – Actualmente</span>
-              <span class="cbadge"><span class="blink">●</span> EN CURSO</span>
+              <span class="cper">2024 – 2026</span>
             </div>
           </div>
           <h3 class="cdeg">DESARROLLO DE APLICACIONES WEB (FP2)</h3>
@@ -30,7 +29,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
             <span class="tag">JavaScript</span><span class="tag">PHP</span>
             <span class="tag">MySQL</span><span class="tag">Java</span><span class="tag">Docker</span>
           </div>
-          <div class="cgrade"><span class="gl">NOTA:</span><span class="gv">En curso</span></div>
+          <div class="cgrade"><span class="gl">ENFOQUE:</span><span class="gv">Arquitectura Web y Desarrollo Full-Stack</span></div>
         </div>
 
         <div class="edu-card pbox">
@@ -56,6 +55,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
           <div class="ctags">
             <span class="tag">Ciencias</span><span class="tag">Tecnología</span>
           </div>
+          <div class="cgrade"><span class="gl">EBAU:</span><span class="gv">Realizada y aprobada</span></div>
         </div>
 
 
